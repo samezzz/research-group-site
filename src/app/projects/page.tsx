@@ -11,11 +11,11 @@ const projects = [
 ]
 
 export default function Projects() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [filterYear, setFilterYear] = useState('')
-  const [filterTopic, setFilterTopic] = useState('')
-  const [filterStudent, setFilterStudent] = useState('')
-  const [filterSupervisor, setFilterSupervisor] = useState('')
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterYear] = useState('');
+  const [filterTopic] = useState('');
+  const [filterStudent] = useState('');
+  const [filterSupervisor] = useState('')
 
   const filteredProjects = projects.filter(project =>
     project.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
@@ -30,32 +30,32 @@ export default function Projects() {
       <h1 className="text-3xl font-bold">Research Projects</h1>
 
       <div className="flex space-x-4">
-        <div className="flex-grow">
+        <div className="grow">
           <div className="relative">
             <input
               type="text"
               placeholder="Search projects..."
-              className="w-full pl-10 pr-4 py-2 border rounded-md"
+              className="w-full rounded-md border py-2 pl-10 pr-4"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
             <Search className="absolute left-3 top-2.5 text-gray-400" />
           </div>
         </div>
-        <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center">
+        <button className="flex items-center rounded-md bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700">
           <Filter className="mr-2" /> Filter
         </button>
       </div>
 
       {/* Filter options would go here */}
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map(project => (
-          <div key={project.id} className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-            <p className="text-gray-600 mb-1">Student: {project.student}</p>
-            <p className="text-gray-600 mb-1">Year: {project.year}</p>
-            <p className="text-gray-600 mb-1">Topic: {project.topic}</p>
+          <div key={project.id} className="rounded-lg bg-white p-6 shadow-md">
+            <h2 className="mb-2 text-xl font-semibold">{project.title}</h2>
+            <p className="mb-1 text-gray-600">Student: {project.student}</p>
+            <p className="mb-1 text-gray-600">Year: {project.year}</p>
+            <p className="mb-1 text-gray-600">Topic: {project.topic}</p>
             <p className="text-gray-600">Supervisor: {project.supervisor}</p>
           </div>
         ))}
