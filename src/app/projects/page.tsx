@@ -51,7 +51,7 @@ export default function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map(project => (
-          <div key={project.id} className="rounded-lg bg-white p-6 shadow-md">
+          <div key={project.id} className="rounded-lg p-6 shadow-md">
             <h2 className="mb-2 text-xl font-semibold">{project.title}</h2>
             <p className="mb-1 text-gray-600">Student: {project.student}</p>
             <p className="mb-1 text-gray-600">Year: {project.year}</p>

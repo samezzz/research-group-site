@@ -18,22 +18,22 @@ export default function Home() {
       </section>
 
       <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-lg bg-white p-6 shadow-md">
+        <div className="rounded-lg p-6 shadow-md">
           <BookOpen className="mb-4 size-12 text-blue-600" />
           <h2 className="mb-2 text-xl font-semibold">Diverse Topics</h2>
           <p className="text-gray-600">Explore research across various academic disciplines.</p>
         </div>
-        <div className="rounded-lg bg-white p-6 shadow-md">
+        <div className="rounded-lg p-6 shadow-md">
           <Users className="mb-4 size-12 text-blue-600" />
           <h2 className="mb-2 text-xl font-semibold">Student Contributions</h2>
           <p className="text-gray-600">Discover projects from talented supervisees.</p>
         </div>
-        <div className="rounded-lg bg-white p-6 shadow-md">
+        <div className="rounded-lg p-6 shadow-md">
           <Calendar className="mb-4 size-12 text-blue-600" />
           <h2 className="mb-2 text-xl font-semibold">Academic Years</h2>
           <p className="text-gray-600">Browse research projects by completion year.</p>
         </div>
-        <div className="rounded-lg bg-white p-6 shadow-md">
+        <div className="rounded-lg p-6 shadow-md">
           <Tag className="mb-4 size-12 text-blue-600" />
           <h2 className="mb-2 text-xl font-semibold">Easy Filtering</h2>
           <p className="text-gray-600">Find projects by topic, student, or supervisor.</p>
