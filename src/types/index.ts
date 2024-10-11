@@ -8,9 +8,6 @@ export interface Student {
 	website: string
 }
 
-export interface StudentCardProps {
-	student: Student
-}
 
 export interface Project {
 	id: number
@@ -20,9 +17,6 @@ export interface Project {
 	imageUrl: string
 }
 
-export interface ProjectCardProps {
-	project: Project
-}
 
 export interface Publication {
 	id: number

@@ -5,7 +5,9 @@ import { StudentProject } from "@/components/student-projects";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
 
-import { StudentCardProps } from "@/types";
+interface StudentCardProps {
+  student: Student
+}
 
 
 export default function StudentCard({ student }: StudentCardProps) {
