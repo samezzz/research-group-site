@@ -1,8 +1,8 @@
+import FundingSection from "@/components/funding-section";
 import HeroSection from "@/components/hero-section";
 import ProfileSection from "@/components/profile-section";
-import StudentsSection from "@/components/students-section";
 import ProjectsSection from "@/components/projects-section";
-import FundingSection from "@/components/funding-section";
+import StudentsSection from "@/components/students-section";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
-import { Project, Student, Publication, Presentation } from "@/types"
-import { ArrowRight, Beaker, Brain, Dna, Microscope, Atom, Zap } from 'lucide-react'
+import { Project, Student, Publication, Presentation } from "@/types";
+import { Brain, Dna, Microscope, Atom, Zap } from 'lucide-react';
 
 export const ongoingProjects: Project[] = [
 	{

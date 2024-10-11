@@ -1,11 +1,11 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import Image from "next/image";
 import { MdOutlineMail } from "react-icons/md";
-import { ModeToggle } from "@/components/mode-toggle";
 
 const Footer = () => {
   return (
-    <div className=" flex lg:items-center pb-10 flex-col px-8 lg:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
-      <div className="lg:flex  lg:space-x-32 md:px-0 pt-4">
+    <div className=" mx-auto flex flex-col px-8 pb-10 lg:items-center lg:px-0 xl:w-3/4 2xl:w-[55%] ">
+      <div className="pt-4  md:px-0 lg:flex lg:space-x-32">
         <div className="container mx-auto px-4 text-center">
           © {new Date().getFullYear()} Research Project Catalog. All rights reserved.
         </div>
@@ -21,9 +21,9 @@ const Footer = () => {
             <MdOutlineMail className="text-2xl text-gray-500" />
           </div>
         </div>
-        <div className="flex-col space-y-6 flex ">
+        <div className="flex flex-col space-y-6 ">
           <div className="pt-10 font-medium">NAVIGATION</div>
-          <div className="font-light space-y-2 text-sm">
+          <div className="space-y-2 text-sm font-light">
             <div>Profile</div>
             <div>Current Students</div>
             <div>Past Students</div>
@@ -51,7 +51,7 @@ export default Footer;
 //     <div>Project Planning</div>
 //   </div>
 // </div>
-// 
+//
 // <div className="flex-col space-y-6 ">
 //   <div className="font-light space-y-4 text-sm">
 //   </div>

@@ -1,15 +1,15 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { researchAreas } from "@/constants"
+import { researchAreas } from "@/constants";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function ResearchInterconnections() {
   const [activeArea, setActiveArea] = useState<string | null>(null)
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
-      <section className="container mx-auto px-4 py-16 items-center">
-        <h2 className="text-3xl font-bold mb-8 text-center">Research Interconnections</h2>
+      <section className="container mx-auto items-center px-4 py-16">
+        <h2 className="mb-8 text-center text-3xl font-bold">Research Interconnections</h2>
         <div className="relative h-[400px]">
           {researchAreas.map((area, index) => (
             <motion.div
@@ -24,7 +24,7 @@ export default function ResearchInterconnections() {
               onMouseLeave={() => setActiveArea(null)}
             >
               <area.icon size={40} />
-              <p className="text-sm font-semibold mt-2">{area.name}</p>
+              <p className="mt-2 text-sm font-semibold">{area.name}</p>
             </motion.div>
           ))}
           {researchAreas.map((area, index) =>

@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import PublicationCard from "@/components/publication-card"
-import PresentationCard from "@/components/presentation-card"
-import Pagination from "@/components/pagination"
-import TabsWithSearch from "@/components/tabs-with-search"
-import { publications, presentations } from "@/constants"
+import { useState } from "react";
+import PublicationCard from "@/components/publication-card";
+import PresentationCard from "@/components/presentation-card";
+import Pagination from "@/components/pagination";
+import TabsWithSearch from "@/components/tabs-with-search";
+import { publications, presentations } from "@/constants";
 
 
 const PublicationsAndPresentations: React.FC = () => {
@@ -23,22 +23,23 @@ const PublicationsAndPresentations: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <p className="text-lg text-muted-foreground mb-8">
+      <p className="mb-8 text-lg text-muted-foreground">
         Explore the latest research outputs from our lab members, including peer-reviewed publications and conference presentations.
       </p>
 
       <TabsWithSearch
         activeTab={activeTab}
-        /*@ts-ignore*/
+        /*@ts-expect-error Type not validated*/
         onTabChange={setActiveTab}
         searchTerm={searchTerm}
         onSearchTermChange={setSearchTerm}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {activeTab === "publications"
-          /*@ts-ignore*/
+        /*@ts-expect-error Type not validated*/
           ? currentItems.map((publication) => <PublicationCard key={publication.id} publication={publication} />)
+        /*@ts-expect-error Type not validated*/
           : currentItems.map((presentation) => <PresentationCard key={presentation.id} presentation={presentation} />)}
       </div>
 

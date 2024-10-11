@@ -1,13 +1,13 @@
 "use client"
 
-import Heading from "@/components/heading"
-import PublicationsAndPresentations from "@/components/publication-and-presentation"
+import Heading from "@/components/heading";
+import PublicationsAndPresentations from "@/components/publication-and-presentation";
 
 export default function Publications() {
   return (
-    <div className="container mx-auto p-4 mb-12">
+    <div className="container mx-auto mb-12 p-4">
       <Heading
-        className="font-extrabold text-2xl mt-12"
+        className="mt-12 text-2xl font-extrabold"
         title="Publications and Presentations"
         text=""
       />

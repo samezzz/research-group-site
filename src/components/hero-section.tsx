@@ -1,30 +1,29 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
+import { CgProfile } from "react-icons/cg";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiPayMoney } from "react-icons/gi";
 import {
   PiArrowRight,
   PiTargetLight,
 } from "react-icons/pi";
-import { GiPayMoney } from "react-icons/gi";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { CgProfile } from "react-icons/cg";
+import { useMediaQuery } from "react-responsive";
 
 const tabs = [
   {
     icon: (
-      <CgProfile className="text-3xl mr-2 text-purple-600 bg-purple-100 p-1 rounded-md" />
+      <CgProfile className="mr-2 rounded-md bg-purple-100 p-1 text-3xl text-purple-600" />
     ),
     name: "Profile",
     feature: "Now with Q&A",
     description: "A researcher with a strong interest in AI in healthcare...",
     more: (
-      <div className="text-purple-600 flex items-center">
+      <div className="flex items-center text-purple-600">
         Read more <PiArrowRight className="ml-1 text-sm" />
       </div>
     ),
@@ -32,12 +31,12 @@ const tabs = [
   },
   {
     icon: (
-      <FaPeopleGroup className="text-3xl mr-2 text-red-600 bg-red-100 p-1 rounded-md" />
+      <FaPeopleGroup className="mr-2 rounded-md bg-red-100 p-1 text-3xl text-red-600" />
     ),
     name: "Students",
     description: "Diverse group of talented students who have contributed...",
     more: (
-      <div className="text-red-600 flex items-center">
+      <div className="flex items-center text-red-600">
         Read more <PiArrowRight className="ml-1 text-sm" />
       </div>
     ),
@@ -46,12 +45,12 @@ const tabs = [
 
   {
     icon: (
-      <PiTargetLight className="text-3xl mr-2 text-blue-600 bg-blue-100 p-1 rounded-md" />
+      <PiTargetLight className="mr-2 rounded-md bg-blue-100 p-1 text-3xl text-blue-600" />
     ),
     name: "Projects",
     description: "Actively engaged in cutting-edge research projects that aim...",
     more: (
-      <div className="text-blue-600 flex items-center">
+      <div className="flex items-center text-blue-600">
         Read more <PiArrowRight className="ml-1 text-sm" />
       </div>
     ),
@@ -60,12 +59,12 @@ const tabs = [
   },
   {
     icon: (
-      <GiPayMoney className="text-3xl mr-2 text-yellow-600 bg-yellow-100 p-1 rounded-md" />
+      <GiPayMoney className="mr-2 rounded-md bg-yellow-100 p-1 text-3xl text-yellow-600" />
     ),
     name: "Funding",
     description: "Our research is made possible through the generous support..",
     more: (
-      <div className="text-yellow-600 flex items-center">
+      <div className="flex items-center text-yellow-600">
         Read more <PiArrowRight className="ml-1 text-sm" />
       </div>
     ),
@@ -75,37 +74,29 @@ const tabs = [
 ];
 
 const HeroSection = () => {
-  const ref = useRef(null);
-
-
   const [activeTab, setActiveTab] = useState(tabs[0]);
-
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
-
-
-
-
 
 
   return (
 
-    <div className="md:items-center flex flex-col ">
+    <div className="flex flex-col md:items-center ">
       <div
         className="
-          font-medium
-          2xl:w-1/3
-          md:w-2/3
-          xl:w-1/2
-          lg:px-0
-          px-8
-          text-5xl
-          xl:text-6xl     
           flex
           justify-center
-          xl:font-medium
-          xl:pt-14
-          text-center 
+          px-8
           pt-6
+          text-center
+          text-5xl
+          font-medium
+          md:w-2/3
+          lg:px-0
+          xl:w-1/2
+          xl:pt-14
+          xl:text-6xl
+          xl:font-medium
+          2xl:w-1/3
           "
       >
         Innovating Healthcare Through Engineering
@@ -113,19 +104,19 @@ const HeroSection = () => {
 
       <p
         className="
-            text-2xl
+            mx-auto
+            w-2/3
             pt-4
             text-center
-            w-2/3
-            mx-auto
+            text-2xl
             "
       >
         Pioneering research that transforms how we understand and treat complex medical conditions.
       </p>
 
-      <div className="flex gap-4 pt-6 items-center justify-center">
+      <div className="flex items-center justify-center gap-4 pt-6">
         <Link href="/contact">
-          <Button className="py-1 bg-black hover:bg-[#070E21]">
+          <Button className="bg-black py-1 hover:bg-[#070E21]">
             <div className="flex items-center justify-center">
               <div className="text-lg text-white">Reach out</div>
               <div>
@@ -136,40 +127,40 @@ const HeroSection = () => {
         </Link>
       </div>
 
-      <div className="pt-10 xl:pt-20 items-center justify-center">
+      <div className="items-center justify-center pt-10 xl:pt-20">
         <Image
           src="/assets/ReadingSideDoodle.svg"
           alt="hero image"
           width={1000}
           height={1000}
-          className="flex items-center justify-center mx-auto w-60 xl:w-80"
+          className="mx-auto flex w-60 items-center justify-center xl:w-80"
         />
       </div>
       {isSmallScreen ? (
         <div className="px-8">
-          <div className="grid grid-cols-4   md:row-span-1  gap-4  xl:gap-6 mt-8   xl:px-0  ">
+          <div className="mt-8 grid   grid-cols-4  gap-4  md:row-span-1 xl:gap-6   xl:px-0  ">
             {tabs.map((tab) => (
               <motion.div
                 key={tab.name}
                 className={`
-              flex 
-            p-1
-              md:p-8
-             
-      
-                cursor-pointer
-        
+              flex
+            cursor-pointer
+              p-1
+
+
+                md:p-8
+
                 ${activeTab.name === tab.name
-                    ? "rounded-md md:rounded-xl bg-[#f6f5f4] dark:bg-[#1C1F20] border-gray-200 md:border items-center justify-center flex p-1 "
-                    : "md:bg-[#f6f5f4] md:dark:bg-[#1C1F20] rounded-md xl:rounded-xl p-1 items-center justify-center hover:bg-[#eae7e7]"
+                    ? "flex items-center justify-center rounded-md border-gray-200 bg-[#f6f5f4] p-1 dark:bg-[#1C1F20] md:rounded-xl md:border "
+                    : "items-center justify-center rounded-md p-1 hover:bg-[#eae7e7] md:bg-[#f6f5f4] md:dark:bg-[#1C1F20] xl:rounded-xl"
                   } `
                 }
 
                 onClick={() => setActiveTab(tab)}
               >
-                <div className="flex flex-col   items-center md:justify-center mx-auto">
-                  <div className="hidden md:flex text-4xl">{tab.icon}</div>
-                  <div className="font-medium text-sm  xl:text-lg mt-1">
+                <div className="mx-auto flex   flex-col items-center md:justify-center">
+                  <div className="hidden text-4xl md:flex">{tab.icon}</div>
+                  <div className="mt-1 text-sm  font-medium xl:text-lg">
                     {tab.name}
                   </div>
                 </div>
@@ -178,9 +169,9 @@ const HeroSection = () => {
           </div>
 
           {/* Display content based on the active tab */}
-          <div className="pt-6 md:py-10   lg:px-16 xl:px-0 md:px-16  w-full ">
+          <div className="w-full pt-6   md:px-16 md:py-10 lg:px-16  xl:px-0 ">
             {activeTab && (
-              <div className=" flex justify-center items-center flex-col  ">
+              <div className=" flex flex-col items-center justify-center  ">
                 <Image
                   src={activeTab.image}
                   width={1025}
@@ -188,12 +179,12 @@ const HeroSection = () => {
                   alt="logo"
                   className="
                 w-full
+             rounded-xl
              border
              p-20
              xl:p-40
-             rounded-xl
-          
-             
+
+
                 "
                 />
               </div>
@@ -205,23 +196,23 @@ const HeroSection = () => {
 
 
       ) : (
-        <div className="flex  xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
+        <div className="flex  w-4/5 items-center justify-between gap-4 hover:cursor-pointer xl:w-3/4 xl:space-x-4 2xl:w-[55%]">
           {tabs.map((tab) => (
             <motion.div
               key={tab.name}
               className={`
-                xl:flex 
-                justify-center 
-                space-x-4
-                xl:pt-4
-                sm:my-10
-               
-                xl:my-0
-                w-60
                 h-36
+                w-60
+                justify-center
+                space-x-4
+                sm:my-10
+
+                xl:my-0
+                xl:flex
+                xl:pt-4
                 ${activeTab === tab
-                  ? "border rounded-xl pt-2"
-                  : "shadow-md rounded-xl pt-2  bg-[#f6f5f4] dark:bg-[#1C1F20] m"
+                  ? "rounded-xl border pt-2"
+                  : "m rounded-xl bg-[#f6f5f4]  pt-2 shadow-md dark:bg-[#1C1F20]"
                 }
               `}
               onMouseEnter={() => setActiveTab(tab)}
@@ -233,7 +224,7 @@ const HeroSection = () => {
 
                   {/* Render feature tag only for "AI" tab */}
                   {tab.name === "AI" && (
-                    <div className="text-xs font-medium text-purple-600 bg-purple-100 px-2 py-1 rounded-full ml-2">
+                    <div className="ml-2 rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-600">
                       {tab.feature}
                     </div>
                   )}
@@ -258,7 +249,7 @@ const HeroSection = () => {
 
                   {/* Conditional rendering for "Read more" link */}
                   {activeTab === tab && (
-                    <div className="text-sm mt-2">{tab.more}</div>
+                    <div className="mt-2 text-sm">{tab.more}</div>
                   )}
                 </motion.div>
               </div>
@@ -270,9 +261,9 @@ const HeroSection = () => {
       )}
 
       {/* Display content based on the active tab */}
-      <div className="hidden md:flex py-10 px-8 md:px-0 lg:w-3/4 2xl:w-[55%]">
+      <div className="hidden px-8 py-10 md:flex md:px-0 lg:w-3/4 2xl:w-[55%]">
         {activeTab && (
-          <div className=" md:flex  items-center justify-center space-x-6 hover:cursor-pointer w-full">
+          <div className=" w-full  items-center justify-center space-x-6 hover:cursor-pointer md:flex">
             <Image
               src={activeTab.image}
               width={500}
@@ -280,12 +271,12 @@ const HeroSection = () => {
               alt="logo"
               className="
                 w-full
-                p-20
-                xl:p-40
-                shadow-md
                 rounded-xl
                 bg-[#f6f5f4]
+                p-20
+                shadow-md
                 dark:bg-[#1C1F20]
+                xl:p-40
         "
             />
           </div>

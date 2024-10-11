@@ -1,6 +1,6 @@
-import { Input } from "@/components/ui/input"
-import { Search } from "lucide-react"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Search } from "lucide-react";
 
 interface TabsWithSearchProps {
   activeTab: string
@@ -15,7 +15,7 @@ const TabsWithSearch: React.FC<TabsWithSearchProps> = ({
   searchTerm,
   onSearchTermChange,
 }) => (
-  <div className="flex justify-between items-center mb-6">
+  <div className="mb-6 flex items-center justify-between">
     <Tabs value={activeTab} onValueChange={onTabChange} className="w-[400px]">
       <TabsList>
         <TabsTrigger value="publications">Publications</TabsTrigger>
@@ -23,7 +23,7 @@ const TabsWithSearch: React.FC<TabsWithSearchProps> = ({
       </TabsList>
     </Tabs>
     <div className="relative">
-      <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+      <Search className="absolute left-2 top-2.5 size-4 text-muted-foreground" />
       <Input
         placeholder="Search..."
         value={searchTerm}

@@ -1,19 +1,19 @@
 "use client"
 
-import ProjectCard from "@/components/project-card"
-import Heading from "@/components/heading"
-import { completedProjects } from "@/constants"
+import Heading from "@/components/heading";
+import ProjectCard from "@/components/project-card";
+import { completedProjects } from "@/constants";
 
 
 export default function CompletedProjects() {
   return (
-    <div className="container mx-auto p-4 mb-12">
+    <div className="container mx-auto mb-12 p-4">
       <Heading
-        className="font-extrabold text-2xl mt-12"
+        className="mt-12 text-2xl font-extrabold"
         title="Projects that have been completed"
         text=""
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {completedProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

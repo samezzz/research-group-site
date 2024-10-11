@@ -1,7 +1,7 @@
 "use client"
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -9,10 +9,14 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { useState } from "react"
+} from "@/components/ui/dialog";
+import { useState } from "react";
 
-import { Project } from "@/constants"
+import { Project } from "@/types";
+
+interface ProjectCardProps {
+  project: Project
+}
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)

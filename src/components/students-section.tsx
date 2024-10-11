@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import { PiArrowRight } from 'react-icons/pi';
 
 const students = [
@@ -13,18 +12,18 @@ const students = [
 
 const StudentsSection = () => {
   return (
-    <div className="pt-16 flex justify-center items-center flex-col">
-      <div className="text-4xl w-3/4 text-center xl:text-5xl font-medium">
+    <div className="flex flex-col items-center justify-center pt-16">
+      <div className="w-3/4 text-center text-4xl font-medium xl:text-5xl">
         Students
       </div>
-      <div className="py-4 xl:w-1/4 text-center px-8">
+      <div className="px-8 py-4 text-center xl:w-1/4">
         Our lab has been fortunate to work with a diverse group of talented students who have contributed to our research goals.
       </div>
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer">
+      <div className="flex items-center text-sky-500 hover:cursor-pointer hover:underline">
         View Students <PiArrowRight className="ml-3 text-sm " />
       </div>
 
-      <div className='grid grid-cols-3  xl:grid-cols-4 items-center justify-center  px-10 md:px-20 lg:px-0 lg:w-1/2 pt-10 gap-10 text-center mx-auto'>
+      <div className='mx-auto grid  grid-cols-3 items-center justify-center  gap-10 px-10 pt-10 text-center md:px-20 lg:w-1/2 lg:px-0 xl:grid-cols-4'>
         {students.map((student, index) => (
           <div key={index} className="">
             <Image

@@ -1,28 +1,28 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { GraduationCap } from "lucide-react"
-import { StudentAvatar } from "@/components/student-avatar"
-import { StudentProject } from "@/components/student-projects"
-import { StudentInterests } from "@/components/student-interests"
-import { StudentContact } from "@/components/student-contact"
+import { StudentAvatar } from "@/components/student-avatar";
+import { StudentContact } from "@/components/student-contact";
+import { StudentInterests } from "@/components/student-interests";
+import { StudentProject } from "@/components/student-projects";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { GraduationCap } from "lucide-react";
 
-import { StudentCardProps } from "@/types"
+import { StudentCardProps } from "@/types";
 
 
 export default function StudentCard({ student }: StudentCardProps) {
   return (
     <Card className="flex flex-col dark:bg-[#1C1F20]">
-      <CardHeader className="flex-row gap-4 items-center">
+      <CardHeader className="flex-row items-center gap-4">
         <StudentAvatar name={student.name} avatar={student.avatar} />
         <div>
           <CardTitle>{student.name}</CardTitle>
-          <div className="flex items-center mt-1 text-muted-foreground">
-            <GraduationCap className="w-4 h-4 mr-1" />
+          <div className="mt-1 flex items-center text-muted-foreground">
+            <GraduationCap className="mr-1 size-4" />
             Class of {student.year}
           </div>
         </div>
       </CardHeader>
 
-      <CardContent className="flex-grow">
+      <CardContent className="grow">
         <StudentProject project={student.project} />
         <StudentInterests interests={student.interests} />
       </CardContent>

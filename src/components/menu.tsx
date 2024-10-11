@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
+import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -14,10 +14,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { VscTools } from "react-icons/vsc";
-import { RiPresentationFill } from "react-icons/ri";
 import { FiCheckCircle } from "react-icons/fi";
-import { VscGraph } from "react-icons/vsc";
+import { RiPresentationFill } from "react-icons/ri";
+import { VscGraph, VscTools } from "react-icons/vsc";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -42,42 +41,42 @@ export function Menu() {
           <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="flex">
-              <ul className="grid p-2 md:w-[400px] dark:bg-[#151819] lg:w-[250px] hover:cursor-pointer border-r">
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <VscTools className="text-2xl mr-2 text-red-600" />
+              <ul className="grid border-r p-2 hover:cursor-pointer dark:bg-[#151819] md:w-[400px] lg:w-[250px]">
+                <div className="flex items-center gap-1 rounded-sm p-1 hover:bg-gray-400/10">
+                  <VscTools className="mr-2 text-2xl text-red-600" />
                   <div className="">
                     <Link href="/ongoing-projects" className="">Ongoing Projects</Link>
-                    <p className="text-gray-400 text-sm font-light">
+                    <p className="text-sm font-light text-gray-400">
                       View current active projects
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <FiCheckCircle className="text-2xl mr-2 text-blue-600" />
+                <div className="flex items-center gap-1 rounded-sm p-1 hover:bg-gray-400/10">
+                  <FiCheckCircle className="mr-2 text-2xl text-blue-600" />
                   <div className="">
                     <Link href="/completed-projects" className="">Completed Projects</Link>
-                    <p className="text-gray-400 text-sm font-light">
+                    <p className="text-sm font-light text-gray-400">
                       Enter the archives
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <RiPresentationFill className="text-2xl mr-2 text-yellow-600" />
+                <div className="flex items-center gap-1 rounded-sm p-1 hover:bg-gray-400/10">
+                  <RiPresentationFill className="mr-2 text-2xl text-yellow-600" />
                   <div className="">
                     <Link href="/publications" className="">Publications</Link>
-                    <p className="text-gray-400 text-sm font-light">
+                    <p className="text-sm font-light text-gray-400">
                       Wonderful Presentations
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <VscGraph className="text-2xl mr-2 text-purple-600" />
+                <div className="flex items-center gap-1 rounded-sm p-1 hover:bg-gray-400/10">
+                  <VscGraph className="mr-2 text-2xl text-purple-600" />
                   <div className="">
                     <Link href="/future-endeavours" className="">Future Endeavours</Link>
-                    <p className="text-gray-400 text-sm font-light">
+                    <p className="text-sm font-light text-gray-400">
                       Long term goals
                     </p>
                   </div>
@@ -89,7 +88,7 @@ export function Menu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Students</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] dark:bg-[#151819]">
+            <ul className="grid w-[400px] gap-3 p-4 dark:bg-[#151819] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -158,7 +157,7 @@ ListItem.displayName = "ListItem";
 //     </ul>
 //   </NavigationMenuContent>
 // </NavigationMenuItem>
-// 
+//
 // <NavigationMenuItem>
 //   <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
 //   <NavigationMenuContent>

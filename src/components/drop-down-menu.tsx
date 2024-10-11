@@ -8,11 +8,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import { VscTools } from "react-icons/vsc";
-import { RiPresentationFill } from "react-icons/ri";
 import { FiCheckCircle } from "react-icons/fi";
-import { VscGraph } from "react-icons/vsc";
 import { IoPeopleOutline } from "react-icons/io5";
+import { RiPresentationFill } from "react-icons/ri";
+import { VscGraph, VscTools } from "react-icons/vsc";
 
 interface DropDownMenuProps {
   onClose: () => void;
@@ -24,7 +23,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="w-screen h-screen bg-white dark:bg-[#1C1F20]  px-4 items-center justify-center absolute right-0 xl:hidden">
+    <div className="absolute right-0 h-screen w-screen  items-center justify-center bg-white px-4 dark:bg-[#1C1F20] xl:hidden">
       <Accordion
         defaultValue="item-1"
         className="
@@ -46,7 +45,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <VscTools className="h-6 w-6 mr-4 text-orange-400" />
+                <VscTools className="mr-4 size-6 text-orange-400" />
               </div>
               <div>Ongoing Projects</div>
             </Link>
@@ -56,7 +55,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <FiCheckCircle className="h-6 w-6 mr-4 text-green-400" />
+                <FiCheckCircle className="mr-4 size-6 text-green-400" />
               </div>
 
               <div>Completed Projects</div>
@@ -67,7 +66,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <RiPresentationFill className="h-6 w-6 mr-4 text-indigo-400" />
+                <RiPresentationFill className="mr-4 size-6 text-indigo-400" />
               </div>
 
               <div>Publications and Presentations</div>
@@ -78,7 +77,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <VscGraph className="h-6 w-6 mr-4 text-blue-400" />
+                <VscGraph className="mr-4 size-6 text-blue-400" />
               </div>
 
               <div>Future Endeavours</div>
@@ -94,7 +93,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <IoPeopleOutline className="h-6 w-6 mr-4 text-orange-400" />
+                <IoPeopleOutline className="mr-4 size-6 text-orange-400" />
               </div>
               <div>Current Students</div>
             </Link>
@@ -104,7 +103,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <IoPeopleOutline className="h-6 w-6 mr-4 text-green-400" />
+                <IoPeopleOutline className="mr-4 size-6 text-green-400" />
               </div>
 
               <div>Past Students</div>
@@ -116,7 +115,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
           className="
             flex
             flex-1
-            items-center 
+            items-center
             justify-between
             border-b
             py-4
@@ -128,7 +127,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
       </Accordion>
 
       <div className="pt-12">
-        <div className="  space-y-4 flex flex-col px-4">
+        <div className="  flex flex-col space-y-4 px-4">
           <Link href={"/contact"}>
             <Button
               className="

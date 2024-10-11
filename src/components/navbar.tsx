@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ActionButtons from "./action-buttons";
 import Logo from "./logo";
 import { Menu } from "./menu";
 
 const Navbar = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const [, setHasScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

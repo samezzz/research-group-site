@@ -1,19 +1,18 @@
+import Image from "next/image";
 import {
   PiArrowRight,
 } from "react-icons/pi";
-import Image from "next/image";
 
-import { VscTools } from "react-icons/vsc";
-import { RiPresentationFill } from "react-icons/ri";
 import { FiCheckCircle } from "react-icons/fi";
-import { VscGraph } from "react-icons/vsc";
+import { RiPresentationFill } from "react-icons/ri";
+import { VscGraph, VscTools } from "react-icons/vsc";
 
 const items = [
   {
     icon: <VscTools className="text-2xl text-red-500" />,
     name: "Ongoing Projects",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+      <div className="flex items-center pt-6 text-sky-500 hover:cursor-pointer hover:underline">
         View Projects <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
@@ -23,7 +22,7 @@ const items = [
     icon: <FiCheckCircle className="text-2xl text-sky-600" />,
     name: "Completed Projects",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+      <div className="flex items-center pt-6 text-sky-500 hover:cursor-pointer hover:underline">
         View Projects <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
@@ -33,7 +32,7 @@ const items = [
     icon: <RiPresentationFill className="text-2xl text-orange-500" />,
     name: "Publications and presentations",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+      <div className="flex items-center pt-6 text-sky-500 hover:cursor-pointer hover:underline">
         View Publications <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
@@ -43,7 +42,7 @@ const items = [
     icon: <VscGraph className="text-2xl text-green-500" />,
     name: "Future Endeavours",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+      <div className="flex items-center pt-6 text-sky-500 hover:cursor-pointer hover:underline">
         Our vision <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
@@ -54,23 +53,23 @@ const items = [
 const ProjectsSection = () => {
   return (
     <>
-      <div className="flex flex-col pt-32 items-center justify-center">
-        <div className="text-3xl xl:text-5xl font-medium justify-center items-center flex">
+      <div className="flex flex-col items-center justify-center pt-32">
+        <div className="flex items-center justify-center text-3xl font-medium xl:text-5xl">
           Projects
         </div>
-        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+        <div className="flex items-center pt-6 text-sky-500 hover:cursor-pointer hover:underline">
           Browse all projects <PiArrowRight className="ml-3 text-sm " />
         </div>
       </div>
-      <div className="grid xl:grid-cols-4  md:grid-cols-1 md:row-span-1  gap-4  xl:gap-6 mt-8 px-8 md:px-16 xl:px-0 xl:w-3/4  2xl:w-[55%] mx-auto md:w-full">
+      <div className="mx-auto mt-8  grid gap-4  px-8  md:row-span-1 md:w-full md:grid-cols-1 md:px-16 xl:w-3/4 xl:grid-cols-4  xl:gap-6 xl:px-0 2xl:w-[55%]">
         {items.map((item, index) => (
           <div
             key={index}
-            className="bg-[#f6f5f4] dark:bg-[#1C1F20] p-6 rounded-xl"
+            className="rounded-xl bg-[#f6f5f4] p-6 dark:bg-[#1C1F20]"
           >
             <div className="flex flex-col ">
               {item.icon}
-              <div className="text-lg font-medium mt-2">{item.name}</div>
+              <div className="mt-2 text-lg font-medium">{item.name}</div>
               {item.button}
             </div>
             {item.image && (
