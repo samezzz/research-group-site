@@ -4,6 +4,7 @@ import { StudentInterests } from "@/components/student-interests";
 import { StudentProject } from "@/components/student-projects";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
+import { Student } from "@/types"
 
 interface StudentCardProps {
   student: Student

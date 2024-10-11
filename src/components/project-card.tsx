@@ -11,6 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import { Project } from "@/types"
 
 interface ProjectCardProps {
   project: Project
